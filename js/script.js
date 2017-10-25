@@ -11,21 +11,29 @@ function buscador() {
 	var hash = md5(ts+privatekey+apikey);
 	palabra = document.getElementById('buscador').value;
 	var web = apiURL +palabra;
+	document.getElementById('buscador').value="";
 	const xhr = new XMLHttpRequest();
 	xhr.open('GET', web, true);
 	xhr.onload =() => {
 		var json = JSON.parse(xhr.responseText);
 		heroes = json.data.results;
-		heroes.forEach(function(heroe) {
+		console.log(palabra.length)
+		if((heroes.length==0) || (palabra.length==0))
+		{
+			document.getElementById("nameheroe").innerHTML = "No existe el superheroe";
+			return
+		}
+			heroes.forEach(function(heroe) {
 			
 			if(palabra.toLowerCase() == heroe.name.toLowerCase()){
 				respuesta = heroe
-				console.log(palabra)
 				document.getElementById("nameheroe").innerHTML = respuesta.name;
 				document.getElementById("historia").innerHTML = "<b class=tamanito>History</b><br>" +respuesta.description;
 				document.getElementById("imagen").innerHTML = "<img id='posi' src="+respuesta.thumbnail.path+"/portrait_xlarge.jpg>"
-				document.getElementById("comics").innerHTML = "<b class=tamanito>Number of comics</b><br>" + respuesta.comics.available;		
+				document.getElementById("comics").innerHTML = "<b class=tamanito>Number of comics</b><br>" + respuesta.comics.available;
+				document.getElementById("series").innerHTML = "<b class=tamanito>Number of series</b><br>" + respuesta.series.available;		
 			}
+			
 			
 			
 		});
