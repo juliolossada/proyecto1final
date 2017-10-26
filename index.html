@@ -18,14 +18,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#"><img id ="logopri" src="imagenes/navlogo.png"></a>
+      <a class="navbar-brand" href="#"><img id ="logopri" src="imagenes/marvelogo.png"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar" >
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Area</a></li> 
-        <li><a href="#">Ubicacion</a></li> 
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Products and services</a></li>
+        <li><a href="#pricing">Toys</a></li> 
+        <li><a href="#team">Our founders</a></li>
+        <li><a href="#apis">Search your hero</a></li>  
       </ul>
     </div>
   </div>
@@ -51,17 +52,17 @@
 <!--services-->
 <div id="services" class="services">
   <div class="container">
-    <h2>Services</h2>
+    <h2 id="products">Products and services</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores consequuntur.</p>
     <div class="row">
       <div class="col-lg-3 col-md-3">
         <i class="fa fa-user" aria-hidden="true"></i>
-        <h4>Superheroes</h4>
+        <h4>Toys</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sed nam commodi</p>
       </div>
        <div class="col-lg-3 col-md-3">
-        <i class="fa fa-history"></i>
-         <h4>Histories</h4>
+        <i class="fa fa-video-camera"></i>
+         <h4>Movies</h4>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sed nam commodi</p>
        </div>
        <div class="col-lg-3 col-md-3">
@@ -70,8 +71,8 @@
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sed nam commodi</p>
        </div>
        <div class="col-lg-3 col-md-3">
-          <i class="fa fa-download"></i>
-         <h4>Downloads</h4>
+          <i class="fa fa-newspaper-o"></i>
+         <h4>Comics</h4>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sed nam commodi</p>
        </div>
     </div>
@@ -83,13 +84,12 @@
 <div id="pricing" class="pricing">
   <div class="container">
     <div class="row">
-      <h2>Pricing</h2>
+      <h2>Toys</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
       <div class="col-lg-3 col-md-3">
         <div class="packages">
-          <h4>Silver</h4>
-          <h1>29.99</h1>
-          <b>Monthly</b>
+          <h4>Toys</h4>
+          <h1>9.99</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <hr>
           <li>Lorem ipsum</li>
@@ -100,9 +100,8 @@
       </div>
       <div class="col-lg-3 col-md-3">
         <div class="packages">
-          <h4>Gold</h4>
-          <h1>39.99</h1>
-          <b>Monthly</b>
+          <h4>Games</h4>
+          <h1>15.99</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <hr>
           <li>Lorem ipsum</li>
@@ -113,9 +112,8 @@
       </div>
       <div class="col-lg-3 col-md-3">
         <div class="packages">
-          <h4>Platinum</h4>
-          <h1>49.99</h1>
-          <b>Monthly</b>
+          <h4>Movies</h4>
+          <h1>2.99</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <hr>
           <li>Lorem ipsum</li>
@@ -126,9 +124,8 @@
       </div>
       <div class="col-lg-3 col-md-3">
         <div class="packages">
-          <h4>Premium</h4>
-          <h1>59.99</h1>
-          <b>Monthly</b>
+          <h4>Comics</h4>
+          <h1>5.99</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <hr>
           <li>Lorem ipsum</li>
@@ -193,26 +190,25 @@
 </div>
 
 
-<div class="apis">
+<div id="apis" class="apis">
   <div class="container fondobuscar">
     <div class="row">
-        <h1 id="titulo">Find your superheroe here</h1>
-        <input class="form-control" type="text" id="buscador" placeholder="Busca tu superheroe" >
-        <button class="btn btn-md pull-right" id="buscar" type="submit" onclick="buscador()"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <h1 id="titulo">Search superheroes here</h1>
+
         <div class="col-sm-4 col-md-4 col-lg-4 col-md-4">
           <h1 align="center" id="nameheroe"></h1>
           <p align="center" id="imagen"></p>
-       
-         
         </div>
+
         <div class="col-sm-4 col-md-4 col-lg-4 col-md-4">
+          <input class="form-control off" type="text" id="buscador" placeholder="Busca tu superheroe"> <button class="btn btn-md pull-right" id="buscar" type="submit" onclick="validaBlanco()"><i class="fa fa-search" aria-hidden="true"></i></button>
+       
            <p id="series"></p>
-           <p id="comics" ></p>
-          
+           <p id="comics" ></p> 
         </div>
+
         <div class="col-sm-4 col-md-4 col-lg-4 col-md-4">
           <p id="historia"></p>
-          
         </div>
 
       

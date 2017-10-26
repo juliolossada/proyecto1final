@@ -4,11 +4,15 @@
 }
 
 #logopri{
-	width: 100px;
-	height: 30px;
-	padding-top: 0;
-
+	width: 130px;
+	height: 50px;
+	padding: 0;
 }
+
+.navbar-brand{
+	padding-top: 0;
+}
+
 
 .navbar {
 	background-color: #222222 !important;
@@ -324,7 +328,7 @@
 }
 
 #historia{
-	align-content: center;
+	align-content: center; 
 	text-align: center;
 	font-size: 16px;
 }
@@ -336,6 +340,7 @@
 }
 .tamanito{
 	font-size: 30px;
+	text-align: center !important;
 }
 
 #titulo{
@@ -358,6 +363,9 @@
 	transform: rotate(360deg);
 	-webkit -transform: rotate(360deg);
 	-webkit -border-right:(50%);
+}
+html{
+	scroll-behavior: smooth;
 }
 
 
