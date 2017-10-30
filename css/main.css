@@ -325,9 +325,11 @@
 
 #buscador {
 	margin-top: 10px;
+	border: solid 3px grey;
 }
 
 #historia{
+	margin-top: auto;
 	align-content: center; 
 	text-align: center;
 	font-size: 16px;
@@ -337,6 +339,7 @@
 	margin-top: 20%;
 	text-align: center;
 	font-size: 24px;
+	text-align: center;
 }
 .tamanito{
 	font-size: 30px;
@@ -361,11 +364,38 @@
 #posi:hover {
 	transition: 1s;
 	transform: rotate(360deg);
+	border-radius: 100%;
 	-webkit -transform: rotate(360deg);
 	-webkit -border-right:(50%);
 }
 html{
 	scroll-behavior: smooth;
 }
+
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #b71c1c; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-left: 25%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading1 {
+	padding-top: 20px;
+	margin-left: 25px;
+
+}
+
+
+
+
+
 
 

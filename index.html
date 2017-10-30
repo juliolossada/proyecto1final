@@ -26,7 +26,8 @@
         <li><a href="#services">Products and services</a></li>
         <li><a href="#pricing">Toys</a></li> 
         <li><a href="#team">Our founders</a></li>
-        <li><a href="#apis">Search your hero</a></li>  
+        <li><a href="#apis">Search your hero</a></li>
+        <li><a href="#contact">Contact</a></li>   
       </ul>
     </div>
   </div>
@@ -194,21 +195,24 @@
   <div class="container fondobuscar">
     <div class="row">
         <h1 id="titulo">Search superheroes here</h1>
-
+          
+    </div>
         <div class="col-sm-4 col-md-4 col-lg-4 col-md-4">
           <h1 align="center" id="nameheroe"></h1>
           <p align="center" id="imagen"></p>
         </div>
 
-        <div class="col-sm-4 col-md-4 col-lg-4 col-md-4">
-          <input class="form-control off" type="text" id="buscador" placeholder="Busca tu superheroe"> <button class="btn btn-md pull-right" id="buscar" type="submit" onclick="validaBlanco()"><i class="fa fa-search" aria-hidden="true"></i></button>
-       
-           <p id="series"></p>
-           <p id="comics" ></p> 
-        </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 col-md-4 center">
+            <input class="form-control off" type="text" id="buscador" placeholder="Busca tu superheroe"  onkeydown="keyCode(event)">
+              <div id="loading1"></div> 
+               <p id="historia"></p>
+           
+
+          </div>
 
         <div class="col-sm-4 col-md-4 col-lg-4 col-md-4">
-          <p id="historia"></p>
+           <p id="series"></p>
+           <p id="comics" ></p> 
         </div>
 
       
@@ -251,25 +255,27 @@
       <h2>Contact</h2>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores omnis. </p>
       <div class="col-lg-6 col-md-6">
+       <form name="formulario" method="post" class="form-group">
         <div class="input-group input-group-lg">
               <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" aria-describedby="sizaing-addon1" placeholder="Full Name">
+              <input id="nombre" type="text" class="form-control" aria-describedby="sizaing-addon1" placeholder="Full Name" required>
         </div>
         <div class="input-group input-group-lg">
               <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" aria-describedby="sizaing-addon1" placeholder="Email Address">
+              <input id="email" type="text" class="form-control" aria-describedby="sizaing-addon1" placeholder="Email Address" required>
         </div>
         <div class="input-group input-group-lg">
               <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" aria-describedby="sizaing-addon1" placeholder="Phonenumber">
+              <input id="numero" type="number" class="form-control" aria-describedby="sizaing-addon1" placeholder="Phonenumber" maxlength="11" required>
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
         <div class="input-group">
-          <textarea id="textarea" class="form-control" width="300px" height="300px" cols="80" rows="6"></textarea>
+          <textarea minlength="10" id="textarea" class="form-control" width="300px" height="300px" cols="80" rows="6"></textarea>
         </div>
-        <button class="btn btn-lg">Submit Your Message</button>
+        <button id="button" name="btn" type="submit" class="btn btn-lg">Submit Your Message</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
