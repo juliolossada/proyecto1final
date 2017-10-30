@@ -9,17 +9,14 @@ document.getElementById("button").addEventListener("click", function(event){
     
 	else if (emailregex.test(correo.value)) {
 
+
 	}
 	else {
 		alert('El email ingresado es invalido');
 
 		event.preventDefault();
 	}
-
-
-
-
-   
+	alert('mensaje enviado')
 });
 
 
