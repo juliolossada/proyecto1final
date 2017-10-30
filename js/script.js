@@ -11,6 +11,7 @@ document.getElementById("button").addEventListener("click", function(event){
     	}
     
 	else if (emailregex.test(correo.value)) {
+		mensaje =false;
 	}
 	else {
 			alert('El email ingresado es invalido');
@@ -44,7 +45,8 @@ function validaBlanco() {
 				document.getElementById("imagen").innerHTML = ""
 				document.getElementById("comics").innerHTML = ""
 				document.getElementById("series").innerHTML = ""	
-				document.getElementById("comics").innerHTML = "NO EXISTE EL SUPERHEROE"
+				document.getElementById("comics").innerHTML = ""
+				document.getElementById("error").innerHTML = "NO EXISTE EL SUPERHEROE"
 
 	}
 	else
@@ -83,6 +85,7 @@ function buscador() {
 				document.getElementById("imagen").innerHTML = ""
 				document.getElementById("comics").innerHTML = ""
 				document.getElementById("series").innerHTML = ""
+				document.getElementById("error").innerHTML = ""
 				setTimeout(function () {
 		
 		var json = JSON.parse(xhr.responseText);
@@ -90,7 +93,8 @@ function buscador() {
 			if(heroes.length == 0)
 			{	document.getElementById("loading1").innerHTML = ""
 				document.getElementById("series").innerHTML = ""
-				document.getElementById("comics").innerHTML = "NO EXISTE EL SUPERHEROE"
+				document.getElementById("comics").innerHTML = ""
+				document.getElementById("error").innerHTML = "NO EXISTE EL SUPERHEROE"
 			}
 			heroes.forEach(function(heroe) {
 
