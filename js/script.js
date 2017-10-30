@@ -1,22 +1,30 @@
 document.getElementById("button").addEventListener("click", function(event){
     nombre = document.getElementById("nombre").value
     correo = document.getElementById('email')
+    mensaje = true
 	emailregex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     if((nombre.length==0)||(nombre.length<4))
-    {	alert('El nombre ingresado es invalido')
-    	event.preventDefault()
-    }
+    	{	
+    		alert('El nombre ingresado es invalido')
+    		event.preventDefault()
+    		mensaje =false;
+    	}
     
 	else if (emailregex.test(correo.value)) {
-
-
 	}
 	else {
-		alert('El email ingresado es invalido');
+			alert('El email ingresado es invalido');
+			event.preventDefault();
+		 }
 
-		event.preventDefault();
-	}
+	if(mensaje ==true)
+	{
 	alert('mensaje enviado')
+		 
+	}
+	
+		 
+	
 });
 
 
