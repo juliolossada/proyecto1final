@@ -11,11 +11,12 @@ document.getElementById("button").addEventListener("click", function(event){
     	}
     
 	else if (emailregex.test(correo.value)) {
-		mensaje =false;
+		
 	}
 	else {
 			alert('El email ingresado es invalido');
 			event.preventDefault();
+			mensaje =false;
 		 }
 
 	if(mensaje ==true)
